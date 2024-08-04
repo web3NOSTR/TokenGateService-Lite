@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog-Themed Members Area</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #eaf4c8; /* Light green background */
+            /* background-image: url('{{ url_for('static', filename='images/datboi.png') }}'); Background frog image */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #5a8d4d; /* Frog green color */
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        p {
+            color: #4b5d23; /* Darker frog green color */
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        
+        .frog-img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #5a8d4d; /* Frog green color */
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #4b5d23; /* Darker frog green on hover */
+        }
+        
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #4b5d23; /* Darker frog green color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Frog Pond!</h1>
+        <img src="{{ url_for('static', filename='images/datboi.png') }}" alt="Frog Icon" class="frog-img">
+        <p>Only members can see this page. Enjoy your stay in our froggy world!</p>
+        <a href="#" class="button">Explore More</a>
+        <footer>
+            <p>&copy; 2024 Frog Club. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

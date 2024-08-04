@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied - Club Entrance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f2f2f2; /* Light gray background */
+            background-image: url('{{ url_for('static', filename='images/modesta-zemgulyte-wMkqe4JCaAw-unsplash.jpg') }}'); /* Background club exterior image */
+            /* background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; */
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* White background with opacity */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: #d9534f; /* Red color for access denied */
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        p {
+            color: #555; /* Dark gray text color */
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #5bc0de; /* Bootstrap blue */
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #31b0d5; /* Darker blue on hover */
+        }
+        
+        .lock-icon {
+            width: 100px;
+            height: auto;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ACCESS DENIED</h1>
+        <img src="{{ url_for('static', filename='images/lock.png') }}" alt="Access Denied" class="lock-icon">
+        <p>You must verify your token ownership to gain access to this page.</p>
+        <a href="/index" class="button">Go to Home Page</a>
+    </div>
+</body>
+</html>
