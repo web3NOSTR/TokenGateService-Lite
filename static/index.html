@@ -53,7 +53,7 @@
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({ messageWithNonce, signature })
+                        body: JSON.stringify({ message, signature })
                     });
 
                     const result = await response.json();

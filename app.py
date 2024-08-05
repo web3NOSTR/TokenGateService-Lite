@@ -42,7 +42,7 @@ def validateUser():
 @app.route('/verify-token', methods=['POST'])
 def verify_token():
     data = request.get_json()
-    message = data.get('messageWithNonce')
+    message = data.get('message')
     signature = data.get('signature')
 
   
